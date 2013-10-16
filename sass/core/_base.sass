@@ -1,0 +1,56 @@
+// *************************************
+//
+//   Base
+//   -> Tag-level settings
+//
+// *************************************
+
+html
+  @extend .tcb
+  font: normal #{$base-fontSize - 4}/#{$base-lineHeight} $font-base
+  +respond-to($grid-m)
+    font-size: $base-fontSize - 2
+  +respond-to($grid-l)
+    font-size: $base-fontSize
+
+// -------------------------------------
+//   Block Content
+// -------------------------------------
+
+ul, p
+  @extend .mbm
+  @extend .mtf
+
+li
+  @extend .mbs
+  @extend .mtf
+
+// ----- Headers ----- //
+
+h1, .h1,
+h2, .h2
+  @extend .mbxs
+  @extend .mtf
+  @extend .tcs
+  line-height: 1.2
+
+h1, .h1
+  @extend .twl
+  font-size: 200%
+
+h2, .h2
+  @extend .twxb
+  font-size: 150%
+
+// -------------------------------------
+//   Inline Content
+// -------------------------------------
+
+a
+  @extend .tch
+  border-bottom: 2px solid lighten($color-base, 70%)
+  text-decoration: none
+  &:hover,
+  &:focus
+    border-bottom-color: $color-action
+    color: $color-subdue

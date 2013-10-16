@@ -1,0 +1,39 @@
+// *************************************
+//
+//   Thumb
+//   -> Mini-image handling
+//
+// *************************************
+
+.thumb
+  display: block
+  img
+    display: block
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.thumb--s
+  @extend .ra
+  border: 2px solid $color-invert
+  overflow: hidden
+
+.thumb--m
+  border: 10px solid rgba($color-invert, 0.4)
+  &:hover,
+  &:focus
+    border-color: rgba($color-invert, 0.6)
+  img
+    max-width: 100%
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+.is-thumb-active
+  border-color: $color-action
+  box-shadow: 0 5px 10px rgba(#000, 0.2)
+  &:hover,
+  &:focus
+    border-color: $color-action

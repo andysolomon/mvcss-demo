@@ -1,0 +1,36 @@
+// *************************************
+//
+//   Bucket
+//   -> Based on:
+//      * http://jsfiddle.net/necolas/rZvEF/
+//
+// *************************************
+
+.bucket
+  @extend %group
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.bucket.bucket--flag
+  display: table
+  .bucket-content
+    vertical-align: middle
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+// ----- Content ----- //
+
+.bucket-content
+  display: table-cell
+  width: 10000px
+
+// ----- Media ----- //
+
+.bucket-media
+  @extend .mrxs
+  display: table-cell
+  float: left

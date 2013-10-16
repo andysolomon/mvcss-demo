@@ -1,0 +1,20 @@
+// *************************************
+//
+//   Cell
+//   -> Width-limiting blocks
+//
+// *************************************
+
+.cell
+  @extend .mbm
+  @extend .mhc
+  @extend .mtm
+  max-width: 38em
+  position: relative
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+.cell.cell--resp
+  @extend .mbf

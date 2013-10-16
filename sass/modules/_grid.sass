@@ -1,0 +1,70 @@
+// *************************************
+//
+//   Grid
+//   -> Based on:
+//    * https://github.com/necolas/suit-grid
+//    * https://github.com/csswizardry/csswizardry-grids
+//
+// *************************************
+
+.grid
+  @extend %group
+  margin-left: -$grid-gutter / 2
+  margin-right: -$grid-gutter / 2
+
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+// ----- Grid Box ----- //
+
+.grid-box
+  @extend %borderBox
+  float: left
+  padding-left: $grid-gutter / 2
+  padding-right: $grid-gutter / 2
+  width: 100%
+
+// Modifiers
+
+.grid-box--center
+  @extend .mhc
+  float: none
+
+// ----- The Grid ----- //
+
+=device-type($namespace: '')
+
+  // One Part
+
+  .grid-box--#{$namespace}1of1
+    width: 100%
+
+  // Two Parts
+
+  .grid-box--#{$namespace}1of2
+    width: 50%
+
+  // Three Parts
+
+  .grid-box--#{$namespace}1of3
+    width: 33.333%
+  .grid-box--#{$namespace}2of3
+    width: 66.666%
+
+  // Four Parts
+
+  .grid-box--#{$namespace}1of4
+    width: 25%
+  .grid-box--#{$namespace}2of4
+    @extend .grid-box--#{$namespace}1of2
+  .grid-box--#{$namespace}3of4
+    width: 75%
+
++device-type()
+
++respond-to($grid-m)
+  +device-type("m--")
+
++respond-to($grid-l)
+  +device-type("l--")

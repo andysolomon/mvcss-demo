@@ -1,0 +1,27 @@
+// *************************************
+//
+//   Icon
+//   -> Handles icon font usage
+//
+// *************************************
+
+.icn::before,
+.icn--after::after
+  display: inline-block
+  font-family: $font-icons
+  font-style: normal
+  font-weight: normal
+  margin-right: 2px
+  speak: none
+  vertical-align: baseline
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Content ----- //
+
+@each $icon in $icons
+  .icn--#{nth($icon, 1)}::before,
+  .icn--#{nth($icon, 1)}--after::after
+    content: "#{nth($icon, 2)}"

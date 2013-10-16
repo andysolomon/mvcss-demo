@@ -1,0 +1,42 @@
+// *************************************
+//
+//   Button
+//   -> Various button representations
+//
+// *************************************
+
+.btn
+  @extend .bca
+  @extend .ram
+  @extend .tac
+  @extend .tss
+  @extend .ttu
+  @extend .twb
+  border: 0
+  color: darken($color-action, 35%)
+  display: inline-block
+  line-height: 3.2
+  padding: 0 $base-whitespace
+  &:hover,
+  &:focus
+    background: darken($color-action, 10%)
+    color: darken($color-action, 40%)
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Behavior ----- //
+
+.btn--block
+  display: block
+
+// ----- Types ----- //
+
+.btn.btn--b
+  @extend .bci
+  color: darken($color-invert, 20%)
+  &:hover,
+  &:focus
+    background: darken($color-invert, 10%)
+    color: darken($color-invert, 35%)
